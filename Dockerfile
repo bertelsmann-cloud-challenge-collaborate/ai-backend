@@ -12,7 +12,7 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
-RUN aws s3 cp s3://udacity-ai-backend/ . --recursive
+RUN aws s3 cp s3://ai-backend-udacity/ . --recursive
 ENV FLASK_APP=process.py
 WORKDIR /root/
 ENTRYPOINT [ "flask", "run", "--host=0.0.0.0" ]
