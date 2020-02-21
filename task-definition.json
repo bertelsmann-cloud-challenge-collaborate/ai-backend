@@ -54,7 +54,7 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "flaskapp"
+        "name": "ai-backend"
       }
     ],
     "placementConstraints": [],
@@ -64,7 +64,7 @@
       "EC2"
     ],
     "taskDefinitionArn": "arn:aws:ecs:us-west-2:162382782731:task-definition/flaskapp:2",
-    "family": "flaskapp",
+    "family": "ai-backend",
     "requiresAttributes": [
       {
         "targetId": null,
