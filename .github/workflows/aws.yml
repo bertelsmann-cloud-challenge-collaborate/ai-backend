@@ -52,7 +52,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     
     - name: Docker login
-      run: echo '${{ secrets.DOCKERHUB_PASS }}' | docker login --username <YOUR_USER> --password-stdin
+      run: echo '${{ secrets.DOCKERHUB_PASS }}' | docker login --username adrik976 --password-stdin
     
     - name: Build, tag, and push image to DockerHub
       id: build-image
