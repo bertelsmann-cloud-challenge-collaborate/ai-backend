@@ -1,40 +1,29 @@
-# Udacity Bertelsmann Technical Scholarship Cloud Track Challenge Collaboration
-This repo contains the team project deliverables from the cloud track challenge program.
+# Udacity Bertelsmann Technical Scholarship Cloud Track Challenge Project - Deploy An AI Sentiment Prediction App to AWS Cloud
  ---
-#### _Project development is currently under way, deliverables will be added incrementally to this repo. Follow us to watch this space :sunglasses:!_
+#### _The project was created by 3 scholars from the Cloud Track Challenge_
 
-![png](BertelsmannChallenge.png)
+* [Adrik S](https://github.com/Adriks976) (France)
+* [Audrey ST](https://github.com/atan4583) (Australia)
+* [Christopher R](https://github.com/christopherrauh) (Germany)
 
-## Project Information
-The team comprises of [Adrik S](https://github.com/Adriks976), [Audrey ST](https://github.com/atan4583) and [Christopher R](https://www.linkedin.com/in/christopher-rauh/). We
+### Repo Information
+![png](assets/cicd-docker-deploy.png)
 
-* plan to deliver a demo cloud DevOps model leveraging and extending on concepts we learned from the cloud track challenge program.
-
-* are building an automated deployment pipeline to deploy a sentiment prediction classifier app to AWS cloud leveraging Serverless Framework, AWS Lambda, Amazon API Gateway, DynamoDB, S3 Bucket, Elastic Load Balancing, ECS and ECR services.
-
-
-### About Automated Deployment Pipeline
-
-
-> * construction in progress...
+> * this repo contains the code files for building and pushing a Flask docker image to Docker Hub, then deploying a new task definition to ECS for starting container operation on AWS
 >
->
-> *
->
+> * any changes pushed to the master branch will trigger the Github CI/CD Action on the repo to reubuild and deploy the changes to AWS
 
-
- ---
-### About Sentiment Prediction Classifier App
-> * construction in progress...
+### CI/CD Action
+> * triggered on push to master branch
 >
+> * workflow file: .github/workflows/aws.yml
 >
-> *
+> * mandatory enviroment variables
+>     - **DOCKERHUB_PASS**: Dockerhub password of **_Adrik S_**
 >
- ---
- ### About Cloud DevOps Model Built on Serverless Framework and AWS Services
- > * construction in progress...
- >
- >
- > *
- >
-  ---
+>     - **AWS_SECRET_ACCESS_KEY**: secret-access-key of iam user **_sc-backend_**
+>
+>     - **AWS_SECRET_ACCESS_KEY**: secret-access-key of iam user **_sc-backend_**
+>
+> * starts Flask docker build and push to Docker Hub, then deploys ECS task definition to AWS to start container operation
+>
